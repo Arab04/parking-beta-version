@@ -1,8 +1,7 @@
 from ultralytics import YOLO
 import cv2
-import cvzone
-from sort.sort import *
-from utils import get_car, read_license_plate, write_csv, draw_licence_plate
+from detection.sort import *
+from utils import get_car, read_license_plate, write_csv
 
 results = {}
 
@@ -12,6 +11,7 @@ mot_tracker = Sort()
 coco_model = YOLO('../models/yolov8n.pt')
 license_plate_detector = YOLO('../models/license_plate_detector.pt')
 mask = cv2.imread("../masks/mask1.png")
+
 # load video
 cap = cv2.VideoCapture('../videos/720.mp4')
 
