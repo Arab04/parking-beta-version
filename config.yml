@@ -1,0 +1,7 @@
+path: /Users/arab04/Desktop/train  # dataset root dir
+train: images  # train images (relative to 'path')
+val: images  # val images (relative to 'path')
+
+# Classes
+names:
+  0: number_plate
